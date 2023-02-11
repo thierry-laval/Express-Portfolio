@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
-  }
+  },
+  "snyk": true
 }
